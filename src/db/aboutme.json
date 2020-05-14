@@ -1,0 +1,20 @@
+{
+  "name": "Rafael",
+  "lastname": "Tessarolo de Oliveira",
+  "birthdate": "1999-04-03",
+  "nationality": "Brazilian",
+  "languages": [
+    {
+      "language": "Portuguese",
+      "level": "Native"
+    },
+    {
+      "language": "English",
+      "level": "Fluent"
+    }
+  ],
+  "highSchoolGraduation": "Hartford High School Arkansas",
+  "collegeGraduation": "UNIP - (In Progress)",
+  "email": "rafinha.tessarolo@hotmail.com",
+  "phone": "+55 19 981888274"
+}

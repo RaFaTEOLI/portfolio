@@ -1,0 +1,21 @@
+li {
+  margin: 0px 5px;
+  cursor: pointer;
+}
+
+li img {
+  border-radius: 50%;
+  transition: all 0.3s;
+  transform-origin: 50% 100%;
+}
+
+li img:hover {
+  opacity: 0.3;
+  transform: scale(1.5);
+  margin: 0 2em;
+}
+
+li.prev img {
+  transform: scale(1.5);
+  margin: 0 1.5em;
+}
