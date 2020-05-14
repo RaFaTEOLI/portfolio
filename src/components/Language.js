@@ -10,7 +10,7 @@ class LanguagesBar extends React.Component {
     return (
       <li>
         <a
-          href="/"
+          href="#app"
           data-tip
           data-for={this.props.name}
           onMouseEnter={this.handleHover}

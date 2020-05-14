@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Modal from './Modal';
 import './Navbar.css';
 
 const API = 'https://api.github.com/users/RaFaTEOLI/repos';
@@ -9,8 +10,18 @@ class Navbar extends Component {
 
     this.state = {
       profilePhoto: '',
+      show: false,
     };
   }
+
+  showModal = () => {
+    this.setState({ show: true });
+  };
+
+  hideModal = () => {
+    this.setState({ show: false });
+  };
+
   componentDidMount() {
     fetch(API)
       .then(response => response.json())
@@ -19,8 +30,13 @@ class Navbar extends Component {
   render() {
     return (
       <header className="header">
+        <Modal
+          show={this.state.show}
+          title="About Me"
+          handleClose={this.hideModal}
+        ></Modal>
         <nav className="navbar">
-          <div className="navbar-title">
+          <div className="navbar-title" onClick={this.showModal}>
             <img
               href="/"
               className="profile"
@@ -32,7 +48,9 @@ class Navbar extends Component {
           <div className="navbar-menu">
             <ul>
               <li>
-                <a href="#aboutme">About Me</a>
+                <a href="#app" onClick={this.showModal}>
+                  About Me
+                </a>
               </li>
               <li>
                 <a href="#projects">Projects</a>
