@@ -53,6 +53,7 @@ class Projects extends React.Component {
               <Project
                 title={project.name}
                 url={project.html_url}
+                language={project.language}
                 description={project.description}
               />
             ))}

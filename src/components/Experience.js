@@ -5,8 +5,8 @@ import './Experience.css';
 class Experience extends React.Component {
   render() {
     return (
-      <div className="card">
-        <div className="container">
+      <div className="experience-card">
+        <div className="container card-content">
           <h4>
             <b>{this.props.title}</b>
           </h4>

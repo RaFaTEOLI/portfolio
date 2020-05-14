@@ -15,6 +15,7 @@ class Project extends React.Component {
           <h4>
             <b>{this.props.title}</b>
           </h4>
+          <p className="info">Language: {this.props.language}</p>
           <p>{this.formatDescription(this.props.description)}</p>
         </div>
         <div className="project-card-footer">
