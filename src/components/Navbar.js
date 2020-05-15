@@ -2,6 +2,10 @@ import React, { Component } from 'react';
 import Modal from './Modal';
 import './Navbar.css';
 
+import { faTimes } from '@fortawesome/free-solid-svg-icons';
+import { faBars } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 const API = 'https://api.github.com/users/RaFaTEOLI/repos';
 
 class Navbar extends Component {
@@ -22,6 +26,16 @@ class Navbar extends Component {
     this.setState({ show: false });
   };
 
+  responsiveIt() {
+    const x = document.getElementById('mainNav');
+
+    if (x.className === 'navbar') {
+      x.className = 'navbar responsive';
+    } else {
+      x.className = 'navbar';
+    }
+  }
+
   componentDidMount() {
     fetch(API)
       .then(response => response.json())
@@ -35,7 +49,7 @@ class Navbar extends Component {
           title="About Me"
           handleClose={this.hideModal}
         ></Modal>
-        <nav className="navbar">
+        <nav className="navbar" id="mainNav">
           <div className="navbar-title" onClick={this.showModal}>
             <img
               href="/"
@@ -45,7 +59,7 @@ class Navbar extends Component {
             ></img>
             Rafael Tessarolo
           </div>
-          <div className="navbar-menu">
+          <div className="navbar-menu" id="navbar-menu">
             <ul>
               <li>
                 <a href="#app" onClick={this.showModal}>
@@ -57,6 +71,12 @@ class Navbar extends Component {
               </li>
               <li>
                 <a href="#experiences">Experience</a>
+              </li>
+              <li>
+                <a href="#app" className="icon" onClick={this.responsiveIt}>
+                  <FontAwesomeIcon className="bars-icon" icon={faBars} />
+                  <FontAwesomeIcon className="close-icon" icon={faTimes} />
+                </a>
               </li>
             </ul>
           </div>

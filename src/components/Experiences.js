@@ -8,6 +8,7 @@ import './Experiences.css';
 
 class Experiences extends React.Component {
   render() {
+    let i = 0;
     return (
       <div id="experiences">
         <div className="row">
@@ -17,6 +18,7 @@ class Experiences extends React.Component {
           {experiences &&
             experiences.map(experience => (
               <Experience
+                key={i++}
                 title={experience.jobPosition}
                 company={experience.company}
                 startDate={experience.startDate}

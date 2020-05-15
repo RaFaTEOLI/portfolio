@@ -26,31 +26,10 @@ class Projects extends React.Component {
           <p className="menu-title">My Projects</p>
         </div>
         <div className="projects">
-          {/* <Project
-            title="React Chat App"
-            image={reactChatApp}
-            description="React chat application using Scaledrone and emoji-mart, where you can chat with a lot of users at the same time."
-          />
-          <Project
-            title="VueJS Knowledge Base Crud"
-            image={vueJSCrud}
-            description="Complete CRUD project using VueJS, with JWT authentication, mongodb and postgresql, developed in a course with Cod3r."
-          />
-          <Project
-            title="React Native Whatsapp"
-            description="React native chat app, where you can add contacts and chat with others, similar to WhatsApp and also based on WhatsApp."
-          />
-          <Project
-            title="Remote SSH Server List"
-            description="This program was developed to make server administration easier, so that you can run a single command on many servers all at once, with no trouble."
-          />
-          <Project
-            title="React Calculator"
-            description="A standard calculator developed in React."
-          /> */}
           {this.state.myProjects &&
             this.state.myProjects.map(project => (
               <Project
+                key={project.id}
                 title={project.name}
                 url={project.html_url}
                 language={project.language}
