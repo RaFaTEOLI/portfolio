@@ -34,11 +34,11 @@ const Modal = ({ handleClose, show, children, title }) => {
         <table className="about-me-table">
           <tbody>
             <tr>
-              <th scope="row">Name:</th>
+              <th scope="row">Name</th>
               <td>{aboutMe.name}</td>
             </tr>
             <tr>
-              <th scope="row">Last Name:</th>
+              <th scope="row">Last Name</th>
               <td>{aboutMe.lastname}</td>
             </tr>
             <tr>
