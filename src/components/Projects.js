@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Project from './Project';
+import Filter from './Filter';
 
 import './Projects.css';
 
@@ -12,22 +13,38 @@ class Projects extends React.Component {
 
     this.state = {
       myProjects: [],
+      searchInput: '',
     };
   }
+
+  handleChange = e => {
+    this.setState({
+      searchInput: e.target.value,
+    });
+  };
+
   componentDidMount() {
     fetch(API)
       .then(response => response.json())
       .then(data => this.setState({ myProjects: data }));
   }
   render() {
+    let filteredProjects = this.state.myProjects.filter(project => {
+      return project.name
+        .toLowerCase()
+        .includes(this.state.searchInput.toLowerCase());
+    });
     return (
       <div id="projects">
         <div className="row">
           <p className="menu-title">My Projects</p>
         </div>
+        <div className="row">
+          <Filter handleChange={this.handleChange} />
+        </div>
         <div className="projects">
-          {this.state.myProjects &&
-            this.state.myProjects.map(project => (
+          {filteredProjects &&
+            filteredProjects.map(project => (
               <Project
                 key={project.id}
                 title={project.name}

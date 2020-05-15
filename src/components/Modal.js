@@ -65,6 +65,18 @@ const Modal = ({ handleClose, show, children, title }) => {
               <th scope="row">Languages</th>
               <td>{formatLanguages(aboutMe.languages)}</td>
             </tr>
+            <tr>
+              <th scope="row">LinkedIn</th>
+              <td>
+                <a
+                  href={aboutMe.linkedin}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Click Here To Open
+                </a>
+              </td>
+            </tr>
           </tbody>
         </table>
       </section>
