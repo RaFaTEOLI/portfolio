@@ -19,3 +19,11 @@ li.prev img {
   transform: scale(1.5);
   margin: 0 1.5em;
 }
+
+@media screen and (max-width: 1300px) {
+  li img:hover {
+    opacity: 0.3;
+    transform: scale(1);
+    margin: 0;
+  }
+}

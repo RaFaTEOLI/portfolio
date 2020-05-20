@@ -3,7 +3,7 @@
   padding: 15px;
   display: flex;
   justify-content: center;
-  align-items: center;
+  flex-wrap: wrap;
 }
 
 .menu-title {
@@ -17,14 +17,4 @@
 .languages-menu ul {
   list-style: none;
   display: flex;
-}
-
-@media screen and (max-width: 600px) {
-  .languages-menu ul {
-    background-color: #282c34;
-    padding: 15px;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
 }

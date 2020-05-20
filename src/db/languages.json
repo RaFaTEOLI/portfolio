@@ -1,0 +1,74 @@
+{
+  "languages": [
+    {
+      "id": 1,
+      "name": "PHP",
+      "image": "php.png"
+    },
+    {
+      "id": 2,
+      "name": "JavaScript",
+      "image": "javascript.png"
+    },
+    {
+      "id": 3,
+      "name": "React, React Native",
+      "image": "react.png"
+    },
+    {
+      "id": 4,
+      "name": "Redux",
+      "image": "redux.png"
+    },
+    {
+      "id": 5,
+      "name": "Java",
+      "image": "java.png"
+    },
+    {
+      "id": 6,
+      "name": "Spring",
+      "image": "spring.png"
+    },
+    {
+      "id": 7,
+      "name": "Bootstrap",
+      "image": "bootstrap.png"
+    },
+    {
+      "id": 8,
+      "name": "Laravel",
+      "image": "laravel.png"
+    },
+    {
+      "id": 9,
+      "name": "Vue",
+      "image": "vue.png"
+    },
+    {
+      "id": 10,
+      "name": "Bash Script",
+      "image": "bash.png"
+    },
+    {
+      "id": 11,
+      "name": "C",
+      "image": "c.png"
+    },
+    {
+      "id": 12,
+      "name": "Firebase",
+      "image": "firebase.png"
+    },
+    {
+      "id": 13,
+      "name": "MySQL",
+      "image": "mysql.png"
+    },
+    {
+      "id": 14,
+      "name": "REST API",
+      "image": "rest.png"
+    }
+  ]
+}

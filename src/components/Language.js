@@ -16,7 +16,7 @@ class LanguagesBar extends React.Component {
           onMouseEnter={this.handleHover}
         >
           <img
-            src={this.props.image}
+            src={require(`../${this.props.image}`)}
             alt="Language"
             height="80"
             width="80"
