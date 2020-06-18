@@ -4,6 +4,8 @@ li {
 }
 
 li img {
+  height: 60px;
+  width: 60px;
   border-radius: 50%;
   transition: all 0.3s;
   transform-origin: 50% 100%;

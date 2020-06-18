@@ -1,0 +1,52 @@
+{
+  "courses": [
+    {
+      "name": "Complete React Developer in 2020 (w/ Redux, Hooks, GraphQL)",
+      "description": "Become a Senior React Developer! Build a massive E-commerce app with Redux, Hooks, GraphQL, ContextAPI, Stripe, Firebase",
+      "taughtBy": "Andrei Neagoie, Yihua Zhang",
+      "language": "English",
+      "hours": "40",
+      "coursing": true
+    },
+    {
+      "name": "Codenation React Online",
+      "description": "A complete front-end course using React",
+      "taughtBy": "Codenation",
+      "language": "Portuguese",
+      "hours": "80",
+      "coursing": false
+    },
+    {
+      "name": "Web Moderno com JavaScript",
+      "description": "A complete fullstack course using React, Vue and Node",
+      "taughtBy": "Cod3r",
+      "language": "Portuguese",
+      "hours": "77",
+      "coursing": false
+    },
+    {
+      "name": "Desenvolvedor Multiplataforma Android/iOS",
+      "description": "React Native course to learn how to build big apps.",
+      "taughtBy": "Jamilton Damasceno, Jorge Sant'Anna",
+      "language": "Portuguese",
+      "hours": "37.5",
+      "coursing": false
+    },
+    {
+      "name": "Desenvolvedor Web Completo",
+      "description": "A course to become a web developer with PHP",
+      "taughtBy": "André Fontenelle",
+      "language": "Portuguese",
+      "hours": "36.5",
+      "coursing": false
+    },
+    {
+      "name": "Fundamentos de Ethical Hacking",
+      "description": "Ethical Hacking course, pentesting and etc",
+      "taughtBy": "Marcos Flávio",
+      "language": "Portuguese",
+      "hours": "24.5",
+      "coursing": false
+    }
+  ]
+}

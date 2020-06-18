@@ -5,6 +5,7 @@ import Navbar from './components/Navbar';
 import LanguagesBar from './components/LanguagesBar';
 import Projects from './components/Projects';
 import Experiences from './components/Experiences';
+import Courses from './components/Courses';
 
 class App extends React.Component {
   render() {
@@ -17,6 +18,8 @@ class App extends React.Component {
           <Projects />
           <hr />
           <Experiences />
+          <hr />
+          <Courses />
         </div>
       </div>
     );
