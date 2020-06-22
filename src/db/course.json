@@ -47,6 +47,14 @@
       "language": "Portuguese",
       "hours": "24.5",
       "coursing": false
+    },
+    {
+      "name": "APIs Spring Rest com Spring Framework",
+      "description": "Faça APIs Rest usando o framework Spring",
+      "taughtBy": "Algaworks",
+      "language": "Portuguese",
+      "hours": "6",
+      "coursing": false
     }
   ]
 }
