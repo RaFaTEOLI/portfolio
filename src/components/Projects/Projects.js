@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-import Project from '../Project/Project';
+import Card from '../Card/Card';
 import Filter from '../Filter/Filter';
 
 import './Projects.css';
@@ -36,12 +36,13 @@ const Projects = props => {
       <div className="projects">
         {filteredProjects &&
           filteredProjects.map(project => (
-            <Project
+            <Card
               key={project.id}
+              color="blue-gradient"
               title={project.name}
-              url={project.html_url}
-              language={project.language}
+              info={`Language: ${project.language}`}
               description={project.description}
+              link={project.html_url}
             />
           ))}
       </div>

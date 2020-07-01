@@ -4,19 +4,22 @@
       "jobPosition": "Full Stack Developer",
       "description": "I worked at TIP Brasil as a full stack developer for 2 years",
       "company": "TIP Brasil",
-      "startDate": "2018-03-01"
+      "startDate": "2018-03-01",
+      "website": "http://www.tipbrasil.com.br/"
     },
     {
       "jobPosition": "Full Stack Developer",
       "description": "I've been working as a full stack developer at LetMeIn since February 2020.",
       "company": "LetMeIn",
-      "startDate": "2020-02-01"
+      "startDate": "2020-02-01",
+      "website": "http://letmein.com.br/"
     },
     {
       "jobPosition": "Full Stack Developer",
       "description": "I'm part of the AntsBox project, a software that connects people around the world, and make remote jobs easy.",
       "company": "AntsBox",
-      "startDate": "2020-04-01"
+      "startDate": "2020-04-01",
+      "website": "https://www2.antsbox.com.br/"
     }
   ]
 }

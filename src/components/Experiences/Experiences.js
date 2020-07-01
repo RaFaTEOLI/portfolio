@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Experience from '../Experience/Experience';
+import Card from '../Card/Card';
 
 import { experiences } from '../../db/experience.json';
 
@@ -16,12 +16,14 @@ const Experiences = () => {
       <div className="experiences">
         {experiences &&
           experiences.map(experience => (
-            <Experience
-              key={i++}
+            <Card
+            key={i++}
+              color="light-blue-gradient"
               title={experience.jobPosition}
-              company={experience.company}
-              startDate={experience.startDate}
+              info={`Company: ${experience.company}`}
+              additionalInfo={`Start Date: ${experience.startDate}`}
               description={experience.description}
+              link={experience.website}
             />
           ))}
       </div>

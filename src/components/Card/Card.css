@@ -5,11 +5,11 @@
   transition: 0.3s;
   width: 250px;
   background-color: #97dffc;
-  margin-bottom: 10px;
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  margin: 5px;
+  /* margin: 10px; */
+  margin-bottom: 20px;
 }
 
 .blue-gradient {
@@ -31,7 +31,7 @@
   background: linear-gradient(
     45deg,
     rgba(37, 145, 189, 1) 48%,
-    rgba(0, 168, 255, 1) 100%
+    rgb(140, 217, 255) 100%
   );
 }
 
@@ -40,12 +40,13 @@
 }
 
 .red-gradient {
+  color: white;
   background: rgb(180, 58, 89);
   background: linear-gradient(
     347deg,
     rgba(180, 58, 89, 1) 0%,
     rgba(253, 29, 29, 1) 56%,
-    rgba(252, 176, 69, 1) 100%
+    rgb(70, 69, 68) 100%
   );
 }
 
@@ -74,6 +75,15 @@
 .info {
   font-size: 14px;
   font-family: 'Quicksand', sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+.info > span {
+  padding-top: 4px;
+}
+.info > .description {
+  padding-top: 10px;
 }
 
 .card:hover {

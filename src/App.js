@@ -6,7 +6,6 @@ import LanguagesBar from './components/LanguagesBar/LanguagesBar';
 import Projects from './components/Projects/Projects';
 import Experiences from './components/Experiences/Experiences';
 import Courses from './components/Courses/Courses';
-import Card from './components/Card/Card';
 
 const App = () => (
   <div className="App">

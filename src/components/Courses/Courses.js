@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Course from '../Course/Course';
+import Card from '../Card/Card';
 
 import { courses } from '../../db/course.json';
 
@@ -14,7 +14,21 @@ const Courses = () => {
         <p className="menu-title">Courses</p>
       </div>
       <div className="courses">
-        {courses && courses.map(course => <Course key={i++} data={course} />)}
+        {courses && courses.map(course =>
+            <Card
+              key={i++}
+              color="red-gradient"
+              title={course.name}
+              description={course.description}
+              link={course.website}
+            >
+              <React.Fragment>
+                <span>Taught by: {course.taughtBy}</span>
+                <span>Language: {course.language}</span>
+                <span>Hours: {course.hours}</span>
+              </React.Fragment>
+            </Card>
+          )}
       </div>
     </div>
   );
