@@ -30,6 +30,9 @@ const Modal = ({ handleClose, show, children, title }) => {
             ×
           </span>
         </div>
+        <div className="avatar-container">
+          <img className="avatar" src={aboutMe.photo} alt="Avatar" />
+        </div>
         {children}
         <table className="about-me-table">
           <tbody>
