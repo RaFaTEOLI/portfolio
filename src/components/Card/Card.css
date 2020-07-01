@@ -1,0 +1,87 @@
+.card {
+  padding: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  transition: 0.3s;
+  width: 250px;
+  background-color: #97dffc;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  margin: 5px;
+}
+
+.blue-gradient {
+  background: rgb(133, 133, 133);
+  background: linear-gradient(
+    347deg,
+    rgba(133, 133, 133, 1) 0%,
+    rgba(149, 125, 254, 1) 87%,
+    rgba(69, 122, 252, 1) 100%
+  );
+}
+
+.blue {
+  background-color: #726a95;
+}
+
+.light-blue-gradient {
+  background: rgb(37, 145, 189);
+  background: linear-gradient(
+    45deg,
+    rgba(37, 145, 189, 1) 48%,
+    rgba(0, 168, 255, 1) 100%
+  );
+}
+
+.light-blue {
+  background-color: #99d8d0;
+}
+
+.red-gradient {
+  background: rgb(180, 58, 89);
+  background: linear-gradient(
+    347deg,
+    rgba(180, 58, 89, 1) 0%,
+    rgba(253, 29, 29, 1) 56%,
+    rgba(252, 176, 69, 1) 100%
+  );
+}
+
+.red {
+  background-color: #e7305b;
+}
+
+.title > h4 {
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 22px;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: center;
+}
+
+.card-content {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  padding: 1rem;
+  margin-bottom: 20px;
+}
+
+.info {
+  font-size: 14px;
+  font-family: 'Quicksand', sans-serif;
+}
+
+.card:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  box-shadow: 0px 0px 31px 6px rgba(253, 253, 253, 0.2);
+}
+
+.container {
+  padding: 2px 16px;
+}

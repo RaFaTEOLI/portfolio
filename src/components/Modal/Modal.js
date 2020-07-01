@@ -1,6 +1,6 @@
 import React from 'react';
 
-import aboutMe from '../db/aboutme.json';
+import aboutMe from '../../db/aboutme.json';
 
 import './Modal.css';
 
