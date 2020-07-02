@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 
 import Card from '../Card/Card';
 import Filter from '../Filter/Filter';
+import Select from '../Select/Select';
 
 import './Projects.css';
 
@@ -10,9 +11,16 @@ const API = 'https://api.github.com/users/RaFaTEOLI/repos';
 const Projects = props => {
   const [myProjects, setMyProjects] = useState([]);
   const [searchInput, setSearchInput] = useState('');
+  const [languages] = useState([]);
+  const [languageFilter, setLanguageFilter] = useState('');
 
   const handleChange = e => {
     setSearchInput(e.target.value);
+  };
+
+  const handleSelectChange = e => {
+    setLanguageFilter(e.target.value);
+    console.log(languageFilter);
   };
 
   const formatTitle = title => {
@@ -43,8 +51,27 @@ const Projects = props => {
       .then(data => setMyProjects(data));
   });
 
+  useEffect(() => {
+    fetch(API)
+    .then(response => response.json())
+    .then(data => {
+      data.map(project => !languages.includes(project.language) ? languages.push(project.language) : false);
+    });
+  }, [languages]);
+
+  // const filteredProjects = myProjects.filter(project => {
+  //   return project.name.toLowerCase().includes(searchInput.toLowerCase());
+  // });
   const filteredProjects = myProjects.filter(project => {
-    return project.name.toLowerCase().includes(searchInput.toLowerCase());
+    if (languageFilter && !searchInput) {
+      return project.language.toLowerCase() === languageFilter.toLowerCase();
+    } else if (!languageFilter && searchInput) {
+      return project.name.toLowerCase().includes(searchInput.toLowerCase());
+    } else if (languageFilter && searchInput) {
+      return project.name.toLowerCase().includes(searchInput.toLowerCase()) && project.language.toLowerCase() === languageFilter.toLowerCase();
+    } else {
+      return true;
+    }
   });
 
   return (
@@ -53,7 +80,10 @@ const Projects = props => {
         <p className="menu-title">My Projects</p>
       </div>
       <div className="row">
-        <Filter handleChange={handleChange} />
+        <div className="filters">
+          <Filter handleChange={handleChange} />
+          <Select data={languages} handleSelectChange={handleSelectChange} placeholder="Language" />
+        </div>
       </div>
       <div className="projects">
         {filteredProjects &&

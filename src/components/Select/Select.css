@@ -1,0 +1,21 @@
+.select {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+.select-input {
+    font-family: 'Open Sans Condensed', sans-serif;
+    color: #fff;
+    border: 2px solid #2e282a;
+    border-radius: 5px;
+    box-sizing: border-box;
+    padding: 7px;
+    font-size: 16px;
+    width: 10%;
+    background-color: darkslategrey;
+}
+  
+input:focus {
+    outline: none;
+}
