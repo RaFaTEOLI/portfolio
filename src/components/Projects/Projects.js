@@ -15,6 +15,28 @@ const Projects = props => {
     setSearchInput(e.target.value);
   };
 
+  const formatTitle = title => {
+    let fullTitle = '';
+    let titleObj = 0;
+
+    if (title.includes('-')) {
+        titleObj = title.split('-');
+    } else if (title.includes('_')) {
+        titleObj = title.split('_');
+    }
+    
+    if (titleObj.length > 1) {
+        titleObj.map(word => {
+            word = word.replace(word.substr(0, 1), word.substr(0, 1).toUpperCase());
+            fullTitle += word + " ";
+            return word;
+        });
+        return fullTitle;
+    }
+    //title = title.replace(/-/g, ' ');
+    return title.replace(title.substr(0, 1), title.substr(0, 1).toUpperCase());
+  }
+
   useEffect(() => {
     fetch(API)
       .then(response => response.json())
@@ -39,7 +61,7 @@ const Projects = props => {
             <Card
               key={project.id}
               color="blue-gradient"
-              title={project.name}
+              title={formatTitle(project.name)}
               info={`Language: ${project.language}`}
               description={project.description}
               link={project.html_url}
