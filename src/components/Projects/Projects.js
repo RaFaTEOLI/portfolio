@@ -6,7 +6,7 @@ import Select from '../Select/Select';
 
 import './Projects.css';
 
-const API = 'https://api.github.com/users/RaFaTEOLI/repos';
+const API = 'https://api.github.com/users/RaFaTEOLI/repos?sort=updated';
 
 const Projects = props => {
   const [myProjects, setMyProjects] = useState([]);
@@ -28,22 +28,22 @@ const Projects = props => {
     let titleObj = 0;
 
     if (title.includes('-')) {
-        titleObj = title.split('-');
+      titleObj = title.split('-');
     } else if (title.includes('_')) {
-        titleObj = title.split('_');
+      titleObj = title.split('_');
     }
-    
+
     if (titleObj.length > 1) {
-        titleObj.map(word => {
-            word = word.replace(word.substr(0, 1), word.substr(0, 1).toUpperCase());
-            fullTitle += word + " ";
-            return word;
-        });
-        return fullTitle;
+      titleObj.map(word => {
+        word = word.replace(word.substr(0, 1), word.substr(0, 1).toUpperCase());
+        fullTitle += word + ' ';
+        return word;
+      });
+      return fullTitle;
     }
     //title = title.replace(/-/g, ' ');
     return title.replace(title.substr(0, 1), title.substr(0, 1).toUpperCase());
-  }
+  };
 
   useEffect(() => {
     fetch(API)
@@ -53,10 +53,14 @@ const Projects = props => {
 
   useEffect(() => {
     fetch(API)
-    .then(response => response.json())
-    .then(data => {
-      data.map(project => !languages.includes(project.language) ? languages.push(project.language) : false);
-    });
+      .then(response => response.json())
+      .then(data => {
+        data.map(project =>
+          !languages.includes(project.language)
+            ? languages.push(project.language)
+            : false
+        );
+      });
   }, [languages]);
 
   // const filteredProjects = myProjects.filter(project => {
@@ -68,7 +72,10 @@ const Projects = props => {
     } else if (!languageFilter && searchInput) {
       return project.name.toLowerCase().includes(searchInput.toLowerCase());
     } else if (languageFilter && searchInput) {
-      return project.name.toLowerCase().includes(searchInput.toLowerCase()) && project.language.toLowerCase() === languageFilter.toLowerCase();
+      return (
+        project.name.toLowerCase().includes(searchInput.toLowerCase()) &&
+        project.language.toLowerCase() === languageFilter.toLowerCase()
+      );
     } else {
       return true;
     }
@@ -82,7 +89,11 @@ const Projects = props => {
       <div className="row">
         <div className="filters">
           <Filter handleChange={handleChange} />
-          <Select data={languages} handleSelectChange={handleSelectChange} placeholder="Language" />
+          <Select
+            data={languages}
+            handleSelectChange={handleSelectChange}
+            placeholder="Language"
+          />
         </div>
       </div>
       <div className="projects">
