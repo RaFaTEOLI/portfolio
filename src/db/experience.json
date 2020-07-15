@@ -5,6 +5,7 @@
       "description": "I worked at TIP Brasil as a full stack developer for 2 years",
       "company": "TIP Brasil",
       "startDate": "2018-03-01",
+      "technologies": "PHP, HTML, CSS, JavaScript",
       "website": "http://www.tipbrasil.com.br/"
     },
     {
@@ -12,6 +13,7 @@
       "description": "I've been working as a full stack developer at LetMeIn since February 2020.",
       "company": "LetMeIn",
       "startDate": "2020-02-01",
+      "technologies": "PHP(Slim, Wordpress), HTML, CSS, JavaScript",
       "website": "http://letmein.com.br/"
     },
     {
@@ -19,6 +21,7 @@
       "description": "I'm part of the AntsBox project, a software that connects people around the world, and make remote jobs easy.",
       "company": "AntsBox",
       "startDate": "2020-04-01",
+      "technologies": "PHP/Laravel, HTML, CSS, JavaScript(React)",
       "website": "https://www2.antsbox.com.br/"
     }
   ]
