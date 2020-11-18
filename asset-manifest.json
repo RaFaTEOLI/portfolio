@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.8e1262eb.chunk.css",
-    "main.js": "/portfolio/static/js/main.ea863d46.chunk.js",
-    "main.js.map": "/portfolio/static/js/main.ea863d46.chunk.js.map",
+    "main.css": "/portfolio/static/css/main.fa582978.chunk.css",
+    "main.js": "/portfolio/static/js/main.7d45fb39.chunk.js",
+    "main.js.map": "/portfolio/static/js/main.7d45fb39.chunk.js.map",
     "runtime-main.js": "/portfolio/static/js/runtime-main.075c0788.js",
     "runtime-main.js.map": "/portfolio/static/js/runtime-main.075c0788.js.map",
-    "static/js/2.b47333af.chunk.js": "/portfolio/static/js/2.b47333af.chunk.js",
-    "static/js/2.b47333af.chunk.js.map": "/portfolio/static/js/2.b47333af.chunk.js.map",
+    "static/js/2.2e6d2416.chunk.js": "/portfolio/static/js/2.2e6d2416.chunk.js",
+    "static/js/2.2e6d2416.chunk.js.map": "/portfolio/static/js/2.2e6d2416.chunk.js.map",
     "index.html": "/portfolio/index.html",
-    "precache-manifest.e3d4c15ea4b5b15099c2afbf8904f747.js": "/portfolio/precache-manifest.e3d4c15ea4b5b15099c2afbf8904f747.js",
+    "precache-manifest.cd72a0726efa7c96a2eb2c9d6aae9c8b.js": "/portfolio/precache-manifest.cd72a0726efa7c96a2eb2c9d6aae9c8b.js",
     "service-worker.js": "/portfolio/service-worker.js",
-    "static/css/main.8e1262eb.chunk.css.map": "/portfolio/static/css/main.8e1262eb.chunk.css.map",
-    "static/js/2.b47333af.chunk.js.LICENSE.txt": "/portfolio/static/js/2.b47333af.chunk.js.LICENSE.txt",
+    "static/css/main.fa582978.chunk.css.map": "/portfolio/static/css/main.fa582978.chunk.css.map",
+    "static/js/2.2e6d2416.chunk.js.LICENSE.txt": "/portfolio/static/js/2.2e6d2416.chunk.js.LICENSE.txt",
     "static/media/bootstrap.png": "/portfolio/static/media/bootstrap.9dc0f829.png",
     "static/media/c.png": "/portfolio/static/media/c.d22fafb2.png",
     "static/media/firebase.png": "/portfolio/static/media/firebase.83422e98.png",
     "static/media/java.png": "/portfolio/static/media/java.3644cfec.png",
     "static/media/javascript.png": "/portfolio/static/media/javascript.7039e13c.png",
     "static/media/laravel.png": "/portfolio/static/media/laravel.1eca6e72.png",
-    "static/media/logo.svg": "/portfolio/static/media/logo.5d5d9eef.svg",
+    "static/media/logo.svg": "/portfolio/static/media/logo.ee7cd8ed.svg",
     "static/media/mysql.png": "/portfolio/static/media/mysql.18dd63cc.png",
     "static/media/php.png": "/portfolio/static/media/php.7ddd902a.png",
     "static/media/postgresql.png": "/portfolio/static/media/postgresql.889b01fd.png",
@@ -30,8 +30,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.075c0788.js",
-    "static/js/2.b47333af.chunk.js",
-    "static/css/main.8e1262eb.chunk.css",
-    "static/js/main.ea863d46.chunk.js"
+    "static/js/2.2e6d2416.chunk.js",
+    "static/css/main.fa582978.chunk.css",
+    "static/js/main.7d45fb39.chunk.js"
   ]
 }
