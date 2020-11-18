@@ -7,6 +7,10 @@ import Projects from './components/Projects/Projects';
 import Experiences from './components/Experiences/Experiences';
 import Courses from './components/Courses/Courses';
 
+import ReactGA from 'react-ga';
+const trackingId = "G-9HTSJYY6CT";
+ReactGA.initialize(trackingId);
+
 const App = () => (
   <div className="App">
     <Navbar />
