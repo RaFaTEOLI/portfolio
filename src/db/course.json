@@ -1,12 +1,20 @@
 {
   "courses": [
     {
+      "name": "GoStack Bootcamp 11",
+      "description": "A Bootcamp focused on JavaScript applications, using NodeJS on the backend, React for the webapp and React Native for the mobile app",
+      "taughtBy": "Diego Fernandes",
+      "language": "Portuguese",
+      "hours": "180",
+      "coursing": true
+    },
+    {
       "name": "Complete React Developer in 2020 (w/ Redux, Hooks, GraphQL)",
       "description": "Become a Senior React Developer! Build a massive E-commerce app with Redux, Hooks, GraphQL, ContextAPI, Stripe, Firebase",
       "taughtBy": "Andrei Neagoie, Yihua Zhang",
       "language": "English",
       "hours": "40",
-      "coursing": true
+      "coursing": false
     },
     {
       "name": "Codenation React Online",
