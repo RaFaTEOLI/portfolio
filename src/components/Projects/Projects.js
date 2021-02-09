@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import Card from '../Card/Card';
 import Filter from '../Filter/Filter';
 import Select from '../Select/Select';
+import Loading from '../Loading/Loading';
 
 import './Projects.css';
 
@@ -13,6 +14,7 @@ const Projects = props => {
   const [searchInput, setSearchInput] = useState('');
   const [languages] = useState([]);
   const [languageFilter, setLanguageFilter] = useState('');
+  const [loading, setLoading] = useState(true);
 
   const handleChange = e => {
     setSearchInput(e.target.value);
@@ -48,7 +50,10 @@ const Projects = props => {
   useEffect(() => {
     fetch(API)
       .then(response => response.json())
-      .then(data => setMyProjects(data));
+      .then(data => {
+        setMyProjects(data);
+        setLoading(false);
+      });
   });
 
   useEffect(() => {
@@ -60,6 +65,7 @@ const Projects = props => {
             ? languages.push(project.language)
             : false
         );
+        setLoading(false);
       });
   }, [languages]);
 
@@ -82,34 +88,38 @@ const Projects = props => {
   });
 
   return (
-    <div id="projects">
-      <div className="row">
-        <p className="menu-title">My Projects</p>
-      </div>
-      <div className="row">
-        <div className="filters">
-          <Filter handleChange={handleChange} />
-          <Select
-            data={languages}
-            handleSelectChange={handleSelectChange}
-            placeholder="Language"
-          />
+      <div id="projects">
+        {loading ? <Loading /> : (
+        <>
+        <div className="row">
+          <p className="menu-title">My Projects</p>
         </div>
-      </div>
-      <div className="projects">
-        {filteredProjects &&
-          filteredProjects.map(project => (
-            <Card
-              key={project.id}
-              color="blue-gradient"
-              title={formatTitle(project.name)}
-              info={`Language: ${project.language}`}
-              description={project.description}
-              link={project.html_url}
+        <div className="row">
+          <div className="filters">
+            <Filter handleChange={handleChange} />
+            <Select
+              data={languages}
+              handleSelectChange={handleSelectChange}
+              placeholder="Language"
             />
-          ))}
+          </div>
+        </div>
+        <div className="projects">
+          {filteredProjects &&
+            filteredProjects.map(project => (
+              <Card
+                key={project.id}
+                color="blue-gradient"
+                title={formatTitle(project.name)}
+                info={`Language: ${project.language}`}
+                description={project.description}
+                link={project.html_url}
+              />
+            ))}
+        </div>
+        </>
+      ) }
       </div>
-    </div>
   );
 };
 

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Modal from '../Modal/Modal';
+import Loading from '../Loading/Loading';
 import './Navbar.css';
 
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
@@ -11,6 +12,7 @@ const API = 'https://api.github.com/users/RaFaTEOLI/repos';
 const Navbar = props => {
   const [profilePhoto, setProfilePhoto] = useState('');
   const [show, setShow] = useState(false);
+  const [loading, setLoading] = useState(true);
 
   const showModal = () => {
     setShow(true);
@@ -33,19 +35,24 @@ const Navbar = props => {
   useEffect(() => {
     fetch(API)
       .then(response => response.json())
-      .then(data => setProfilePhoto(data[0].owner.avatar_url));
+      .then(data => {
+        setProfilePhoto(data[0].owner.avatar_url);
+        setLoading(false);
+      });
   });
   return (
     <header className="header">
       <Modal show={show} title="About Me" handleClose={hideModal}></Modal>
       <nav className="navbar" id="mainNav">
         <div className="navbar-title" onClick={showModal}>
+          {loading ? <Loading /> : 
           <img
             href="/"
             className="profile"
             src={profilePhoto}
             alt="Profile"
-          ></img>
+          ></img> 
+          }
           Rafael Tessarolo
         </div>
         <div className="navbar-menu" id="navbar-menu">

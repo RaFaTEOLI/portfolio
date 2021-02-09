@@ -18,7 +18,7 @@ const LanguagesBar = () => (
       <ul>
         {languages &&
           languages.map(language => (
-            <div>
+            <div key={language.id}>
               <Language
                 key={language.id}
                 name={language.name}
