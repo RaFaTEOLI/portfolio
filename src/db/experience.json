@@ -26,6 +26,22 @@
     },
     {
       "jobPosition": "Full Stack Developer",
+      "description": "Developing an opensource project for schools",
+      "company": "OpenGrades",
+      "startDate": "2020-07-01",
+      "technologies": "PHP(Laravel), HTML, CSS, JavaScript, TDD, SOLID",
+      "website": "https://github.com/RaFaTEOLI/open-grades"
+    },
+    {
+      "jobPosition": "PHP Laravel Developer",
+      "description": "Contributed to an opensource laravel library",
+      "company": "LaravelEntrust",
+      "startDate": "2021-02-15",
+      "technologies": "PHP(Laravel)",
+      "website": "https://github.com/shanmuga3/laravel-entrust/commit/9c50480ca6c1862aaa7643135b7a9f735cf7ef31"
+    },
+    {
+      "jobPosition": "Full Stack Developer",
       "description": "Developer at Blockbit, one of the biggest companies in cybersecurity",
       "company": "Blockbit",
       "startDate": "2021-02-08",

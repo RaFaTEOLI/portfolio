@@ -1,12 +1,20 @@
 {
   "courses": [
     {
+      "name": "The Complete Junior to Senior Web Developer Roadmap",
+      "description": "Go from Junior Developer to Senior Developer. Learn all the technical skills Senior Web Developers know!",
+      "taughtBy": "Andrei Neagoie",
+      "language": "English",
+      "hours": "35",
+      "coursing": true
+    },
+    {
       "name": "GoStack Bootcamp 11",
       "description": "A Bootcamp focused on JavaScript applications, using NodeJS on the backend, React for the webapp and React Native for the mobile app",
       "taughtBy": "Diego Fernandes",
       "language": "Portuguese",
       "hours": "180",
-      "coursing": true
+      "coursing": false
     },
     {
       "name": "Complete React Developer in 2020 (w/ Redux, Hooks, GraphQL)",

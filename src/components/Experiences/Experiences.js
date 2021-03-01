@@ -6,12 +6,17 @@ import { experiences } from '../../db/experience.json';
 
 import './Experiences.css';
 
+import { faGlobe } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 const Experiences = () => {
   let i = 0;
   return (
     <div id="experiences">
       <div className="row">
-        <p className="menu-title">My Experience</p>
+        <p className="menu-title">
+          <FontAwesomeIcon icon={faGlobe} /> My Experience
+        </p>
       </div>
       <div className="experiences">
         {experiences &&

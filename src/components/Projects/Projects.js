@@ -5,6 +5,9 @@ import Filter from '../Filter/Filter';
 import Select from '../Select/Select';
 import Loading from '../Loading/Loading';
 
+import { faLaptopCode } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 import './Projects.css';
 
 const API = 'https://api.github.com/users/RaFaTEOLI/repos?sort=updated';
@@ -88,38 +91,42 @@ const Projects = props => {
   });
 
   return (
-      <div id="projects">
-        {loading ? <Loading /> : (
+    <div id="projects">
+      {loading ? (
+        <Loading />
+      ) : (
         <>
-        <div className="row">
-          <p className="menu-title">My Projects</p>
-        </div>
-        <div className="row">
-          <div className="filters">
-            <Filter handleChange={handleChange} />
-            <Select
-              data={languages}
-              handleSelectChange={handleSelectChange}
-              placeholder="Language"
-            />
+          <div className="row">
+            <p className="menu-title">
+              <FontAwesomeIcon icon={faLaptopCode} /> My Projects
+            </p>
           </div>
-        </div>
-        <div className="projects">
-          {filteredProjects &&
-            filteredProjects.map(project => (
-              <Card
-                key={project.id}
-                color="blue-gradient"
-                title={formatTitle(project.name)}
-                info={`Language: ${project.language}`}
-                description={project.description}
-                link={project.html_url}
+          <div className="row">
+            <div className="filters">
+              <Filter handleChange={handleChange} />
+              <Select
+                data={languages}
+                handleSelectChange={handleSelectChange}
+                placeholder="Language"
               />
-            ))}
-        </div>
+            </div>
+          </div>
+          <div className="projects">
+            {filteredProjects &&
+              filteredProjects.map(project => (
+                <Card
+                  key={project.id}
+                  color="blue-gradient"
+                  title={formatTitle(project.name)}
+                  info={`Language: ${project.language}`}
+                  description={project.description}
+                  link={project.html_url}
+                />
+              ))}
+          </div>
         </>
-      ) }
-      </div>
+      )}
+    </div>
   );
 };
 

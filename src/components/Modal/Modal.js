@@ -72,6 +72,7 @@ const Modal = ({ handleClose, show, children, title }) => {
               <th scope="row">LinkedIn</th>
               <td>
                 <a
+                  className="linkedin"
                   href={aboutMe.linkedin}
                   target="_blank"
                   rel="noopener noreferrer"
